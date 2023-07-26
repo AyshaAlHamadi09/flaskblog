@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form>
+
+    <label for="author"> name of author: </label><br>
+    <input type="text" id="author" name="author" required><br>
+
+    <label for="title"> post title: </label><br>
+    <input type="text" id="title" name="title" required><br>
+
+    <label for="content"> post content: </label><br>
+    <textarea id="content" name="content" rows="6" cols="50" required> </textarea><br>
+
+    <input type="submit" value="Share post"><br>
+
+
+
+
+
+</form>
+
+
+
+
+
+</body>
+</html>
