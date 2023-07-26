@@ -1,4 +1,1 @@
-[
-    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}
-]
+[{"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}, {"id": 9, "author": "Chris Lee", "title": "Cooking Adventures", "content": "Sharing my culinary experiments."}, {"id": 10, "author": "Maria Rodriguez", "title": "Fitness Journey", "content": "My progress in achieving fitness goals."}, {"id": 11, "author": "David Clark", "title": "Photography Passion", "content": "Capturing the beauty of the world through my lens."}, {"id": 12, "author": "Sophie Green", "title": "Artistic Expressions", "content": "Exploring different forms of art and creativity."}]

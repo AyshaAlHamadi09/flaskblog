@@ -33,6 +33,21 @@ def add():
         return render_template('add.html', title='new post')
 
 
+@app.route('/delete/<int:post_id>')
+def delete(post_id):
+    with open('data_structure.json', 'r') as all_data:
+        blogposts = json.load(all_data)
+
+    for index, post in enumerate(blogposts):
+        if post['id'] == post_id:
+            del blogposts[index]
+
+    with open('data_structure.json', 'w') as all_data:
+        json.dump(blogposts, all_data)
+
+    return render_template('delete.html', post_id=post_id)
+
+
 
 
 
