@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form action="{{url_for('update', post_id=post_id) }}" method="post">
+
+    <label for="title"> update title: </label><br>
+    <input type="text" id="title" name="title" required><br>
+
+    <label for="content"> update content: </label><br>
+    <textarea id="content" name="content" rows="6" cols="50" required> </textarea><br>
+
+    <input type="submit" value="Update post"><br>
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+</body>
+</html>

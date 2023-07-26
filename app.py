@@ -47,6 +47,28 @@ def delete(post_id):
 
     return render_template('delete.html', post_id=post_id)
 
+@app.route('/update/<int:post_id>', methods=['GET', 'POST'])
+def update(post_id):
+    if request.method == 'POST':
+        new_title = request.form.get('title')
+        new_content = request.form.get('content')
+        with open('data_structure.json', 'r') as all_data:
+            blogposts = json.load(all_data)
+
+        for post in blogposts:
+            if post['id'] == post_id:
+                post['title'] = new_title
+                post['content'] = new_content
+
+        with open('data_structure.json', 'w') as all_data:
+            json.dump(blogposts, all_data)
+
+        return redirect(url_for('index'))
+
+    return render_template('update.html', title='update post', post_id=post_id)
+
+
+
 
 
 
