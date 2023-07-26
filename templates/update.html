@@ -10,11 +10,14 @@
 
 <form action="{{url_for('update', post_id=post_id) }}" method="post">
 
+    <label for="author"> update author: </label><br>
+    <input type="text" id="author" name="author" value="{{orig_author}}" required><br>
+
     <label for="title"> update title: </label><br>
-    <input type="text" id="title" name="title" required><br>
+    <input type="text" id="title" name="title" value="{{orig_title}}" required><br>
 
     <label for="content"> update content: </label><br>
-    <textarea id="content" name="content" rows="6" cols="50" required> </textarea><br>
+    <textarea id="content" name="content" rows="6" cols="50" required> {{ orig_content }}</textarea><br>
 
     <input type="submit" value="Update post"><br>
 
