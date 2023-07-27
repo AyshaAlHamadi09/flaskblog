@@ -20,7 +20,7 @@ def add():
         with open('data_structure.json', 'r') as all_data:
             blogposts = json.load(all_data)
 
-        id = len(blogposts) + 1
+        id = max(post['id'] for post in blogposts) + 1
         new_post = {'id': id, 'author':author, 'title': title, 'content': content}
         blogposts.append(new_post)
 
